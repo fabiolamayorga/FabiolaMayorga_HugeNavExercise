@@ -1,0 +1,238 @@
+@import "fonts.css";
+@import "responsive";
+// Variables
+
+$magenta: #ec008c;
+$light-gray: #eee;
+$translutent-black: rgba(0, 0, 0, 0.5);
+
+// Responsive stuff
+
+.hide-desktop {
+  display: none;
+
+  @include phone {
+    display: block;
+  }
+}
+
+.show-desktop {
+  display: block;
+  visibility: visible;
+
+  @include desktop {
+    display: none;
+    visibility: hidden;
+
+  }
+}
+
+
+//Styles
+
+body {
+  color: #fff;
+  margin: 0;
+}
+
+h1 {
+  font: 20vmin/1 HUGEAvantGardeBold;
+  letter-spacing: -0.06em;
+  text-align: center;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  width: 100%;
+}
+
+.main-navigation-wrapper {
+  display: flex;
+  background: $magenta;
+  font-family: 'HUGEAvantGardeBold';
+  font-size: 21px;
+  height: 69px;
+  padding: 0 24px;
+
+  @include phone {
+    flex-direction: column;
+  }
+
+  .logo {
+    width: 60px;
+    align-self: center;
+  }
+
+  .hamburguer {
+    width: 64px;
+    height: 69px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .main-navigation-tools {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .mainNavigation {
+    width: 100%;
+    display: flex;
+
+    @include phone {
+      flex-direction: column;
+      margin: 0;
+      background: white;
+      z-index: 1;
+      position: absolute;
+      top: 69px;
+      left: 0;
+      width: 80%;
+      padding-top: 12px;
+    }
+
+    .subnavigation {
+      display: none;
+    }
+
+  &-item {
+    a {
+      padding: 24px;
+      color: white;
+      display: block;
+
+      @include phone {
+        padding: 0 24px;
+        color: black;
+        width: 73px;
+      }
+    }
+    &:hover {
+      background: white;
+      color: $magenta;
+
+      a {
+        color: $magenta;
+      }
+
+      .subnavigation {
+        background: white;
+        display: block;
+        position: absolute;
+        padding: 0;
+
+        &-subitem {
+
+          a {
+            font-family: 'Galaxie';
+            font-size: 16px;
+            color: black;
+          }
+
+          &:hover {
+            background: $light-gray;
+
+            a {
+              color: $magenta;
+            }
+          }
+        }
+      }
+    }
+
+    @include phone {
+      //height: 48px;
+      line-height: 48px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      &:hover {
+        background: $light-gray;
+      }
+    }
+  } 
+
+  .has-subitems {
+    @include phone {
+      .subnavigation {
+        display: none;
+      }
+      
+      a {
+        position: relative;
+      }
+
+      .chevron {
+        position: relative;
+
+        &:after {
+          border-style: solid;
+          border-width: 0.2em 0.2em 0 0;
+          border-color: #ec008c;
+          content: '';
+          display: inline-block;
+          height: 0.45em;
+          right: 12px;
+          position: absolute;
+          top: 0;
+          transform: rotate(135deg);
+          vertical-align: top;
+          width: 0.45em;
+          bottom: 0;
+          margin: auto;
+        }
+      }
+
+      &.open {
+        .chevron {
+          &:after {
+            transform: rotate(-45deg);
+          }
+
+        }
+
+        .subnavigation {
+          display: flex;
+          position: relative;
+          width: 100%;
+          flex-direction: column;
+
+          a {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .logo {
+    width: 51px;
+    align-self: center;
+    margin-right: 48px;
+
+    &:hover {
+      background: none;
+    }
+  }
+  }
+}
+
+
+
+
+

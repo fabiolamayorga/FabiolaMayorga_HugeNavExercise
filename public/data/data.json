@@ -1,0 +1,103 @@
+{
+    "navItems" : [
+        {
+            "label":"Work",
+            "url": "/work",
+            "subItems": []
+        },
+        {
+            "label":"About",
+            "url": "/about",
+            "subItems": [
+                {
+                    "label": "What we do",
+                    "url": "/about/what-we-do"
+                },
+                {
+                    "label": "How we work",
+                    "url": "/about/how-we-work"
+                },                
+                {
+                    "label": "Leadership",
+                    "url": "/about/Leadership"
+                }
+            ]
+        },
+        {
+            "label":"Careers",
+            "url": "/careers",
+            "subItems": [
+                {
+                    "label": "Client Services",
+                    "url": "/careers/client-services"
+                },
+                {
+                    "label": "Creative",
+                    "url": "/careers/creative"
+                },                
+                {
+                    "label": "Motion & Media",
+                    "url": "/careers/motion-and-media"
+                },                
+                {
+                    "label": "Operations",
+                    "url": "/careers/operations"
+                },                
+                {
+                    "label": "People",
+                    "url": "/careers/people"
+                },                
+                {
+                    "label": "Strategy",
+                    "url": "/careers/strategy"
+                },                
+                {
+                    "label": "Technology",
+                    "url": "/careers/technology"
+                },                
+                {
+                    "label": "UX & Product Design",
+                    "url": "/careers/ux-and-product-design"
+                }
+            ]
+        },
+        {
+            "label":"Ideas",
+            "url": "/about",
+            "subItems": [
+                {
+                    "label": "Reports",
+                    "url": "/about/reports"
+                },
+                {
+                    "label": "Perspectives",
+                    "url": "/about/perspectives"
+                },                
+                {
+                    "label": "Books",
+                    "url": "/about/books"
+                },                
+                {
+                    "label": "Videos",
+                    "url": "/about/videos"
+                }
+            ]
+        },
+        {
+            "label":"News",
+            "url": "/about",
+            "subItems": []
+        },
+        {
+            "label":"Events",
+            "url": "/events",
+            "subItems": []
+        },
+        {
+            "label":"About",
+            "url": "/about",
+            "subItems": []
+        }
+        
+    ]
+}
