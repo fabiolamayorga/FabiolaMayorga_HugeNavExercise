@@ -88,6 +88,10 @@ export default class MainNavigation {
         
     };
 
+    /*
+    * Toggles menu
+    * */
+
     toggleMenu(e) {
         let navigation = document.querySelector('.mainNavigation');
         let logo = document.querySelector('.logo');
@@ -104,6 +108,10 @@ export default class MainNavigation {
         }
     }
 
+    /*
+    * Open subnavigation in mobile
+    * */
+   
     openSubNav(e, subitem, siblings) {
         let parent = subitem;
 
