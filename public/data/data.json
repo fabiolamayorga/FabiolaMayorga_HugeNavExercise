@@ -94,9 +94,38 @@
             "subItems": []
         },
         {
-            "label":"About",
+            "label":"Contact",
             "url": "/about",
-            "subItems": []
+            "subItems": [
+                {
+                    "label": "Atlanta",
+                    "url": "/about/reports"
+                },
+                {
+                    "label": "Brooklyn",
+                    "url": "/about/perspectives"
+                },                
+                {
+                    "label": "DC",
+                    "url": "/about/books"
+                },                
+                {
+                    "label": "London",
+                    "url": "/about/videos"
+                },                
+                {
+                    "label": "Los Angeles",
+                    "url": "/about/videos"
+                },                
+                {
+                    "label": "Oakland",
+                    "url": "/about/videos"
+                },                
+                {
+                    "label": "Toronto",
+                    "url": "/about/videos"
+                }
+            ]
         }
         
     ]

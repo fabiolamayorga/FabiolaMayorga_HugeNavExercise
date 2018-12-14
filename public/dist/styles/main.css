@@ -9,7 +9,7 @@
 .show-desktop {
   display: block;
   visibility: visible; }
-  @media (max-width: 1199px) {
+  @media (min-width: max-width 99999px) {
     .show-desktop {
       display: none;
       visibility: hidden; } }
@@ -50,18 +50,26 @@ img {
       flex-direction: column; } }
   .main-navigation-wrapper .logo {
     width: 60px;
-    align-self: center; }
+    align-self: center;
+    margin-right: 24px; }
+    @media (max-width: 767px) {
+      .main-navigation-wrapper .logo.show-desktop {
+        display: none;
+        visibility: hidden; } }
   .main-navigation-wrapper .hamburguer {
     width: 64px;
     height: 69px;
     margin: 0;
-    padding: 0; }
+    padding: 0;
+    background: none;
+    border: 0; }
   .main-navigation-wrapper .main-navigation-tools {
     display: flex;
     justify-content: space-between; }
   .main-navigation-wrapper .mainNavigation {
     width: 100%;
-    display: flex; }
+    display: flex;
+    visibility: visible; }
     @media (max-width: 767px) {
       .main-navigation-wrapper .mainNavigation {
         flex-direction: column;
@@ -72,9 +80,16 @@ img {
         top: 69px;
         left: 0;
         width: 80%;
-        padding-top: 12px; } }
+        padding-top: 12px;
+        transition: width .35s ease-in-out;
+        visibility: visible; } }
     .main-navigation-wrapper .mainNavigation .subnavigation {
       display: none; }
+    .main-navigation-wrapper .mainNavigation.show-desktop {
+      width: 0%; }
+      @media (max-width: 767px) {
+        .main-navigation-wrapper .mainNavigation.show-desktop {
+          visibility: hidden; } }
     .main-navigation-wrapper .mainNavigation-item a {
       padding: 24px;
       color: white;
@@ -131,7 +146,8 @@ img {
           vertical-align: top;
           width: 0.45em;
           bottom: 0;
-          margin: auto; }
+          margin: auto;
+          transition: width 2s, height 2s, transform .5s; }
       .main-navigation-wrapper .mainNavigation .has-subitems.open .chevron:after {
         transform: rotate(-45deg); }
       .main-navigation-wrapper .mainNavigation .has-subitems.open .subnavigation {

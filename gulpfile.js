@@ -28,3 +28,10 @@ gulp.task('sass', function(){
 
 });
 
+//gulp.task('default', ['sass', 'js', 'watch']);
+
+gulp.task('default', gulp.series(gulp.parallel('sass','js'), 'watch'))
+
+
+
+

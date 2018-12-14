@@ -1,7 +1,7 @@
 /* Screen Sizes */
 
-$phone-width: 768px - 1px;
-$desktop-width: 1200px - 1px;
+$phone-width: 767px;
+$desktop-width: 768px;
 
 
 @mixin phone {
@@ -11,7 +11,7 @@ $desktop-width: 1200px - 1px;
 }
 
 @mixin desktop {
-  @media (max-width: #{ $desktop-width }) {
+  @media (min-width: #{ $desktop-width } and max-width 99999px) {
     @content;
   }
 }

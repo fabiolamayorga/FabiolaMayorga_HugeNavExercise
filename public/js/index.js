@@ -76,14 +76,16 @@ export default class MainNavigation {
 
     addEventHandlers() {
         let subItems = document.querySelectorAll('.has-subitems');
+        let mainNavigation = document.querySelector('.mainNavigation');
+        
         let chevron = "";
 
         for (let i = 0; i < subItems.length; i++){
             chevron = subItems[i].querySelector('.chevron');
-            chevron.addEventListener("click", e => this.openSubNav(e, subItems[i]), false);
+            chevron.addEventListener("click", e => this.openSubNav(e, subItems[i], subItems), false);
         }
-
         this.hamburguerButton.addEventListener("click",e => this.toggleMenu(e), false);
+        
     };
 
     toggleMenu(e) {
@@ -93,8 +95,8 @@ export default class MainNavigation {
         if (navigation.classList.contains('show-desktop')) {
             navigation.classList.remove('show-desktop');
             logo.classList.remove('show-desktop');
-            this.hamburguerButton.innerHTML = `<img src="images/toggle-close.svg" />`
-
+            this.hamburguerButton.innerHTML = `<img src="images/toggle-close.svg" />`;
+            
         }else {
             navigation.classList.add('show-desktop');
             logo.classList.add('show-desktop');
@@ -102,8 +104,15 @@ export default class MainNavigation {
         }
     }
 
-    openSubNav(e, subitem) {
+    openSubNav(e, subitem, siblings) {
         let parent = subitem;
+
+        siblings.forEach(sibling => {
+            if(sibling !== parent) {
+                sibling.classList.remove('open');
+            }
+        })
+
         if (parent.classList.contains('open')) {
             parent.classList.remove('open');
         }else {

@@ -75,6 +75,14 @@ img {
   .logo {
     width: 60px;
     align-self: center;
+    margin-right: 24px;
+
+    &.show-desktop {
+      @include phone {
+        display: none;
+        visibility: hidden;
+      }
+    }
   }
 
   .hamburguer {
@@ -82,6 +90,8 @@ img {
     height: 69px;
     margin: 0;
     padding: 0;
+    background: none;
+    border: 0;
   }
 
   .main-navigation-tools {
@@ -92,6 +102,7 @@ img {
   .mainNavigation {
     width: 100%;
     display: flex;
+    visibility: visible;
 
     @include phone {
       flex-direction: column;
@@ -103,11 +114,24 @@ img {
       left: 0;
       width: 80%;
       padding-top: 12px;
+      transition: width .35s ease-in-out;
+      visibility: visible;
     }
 
     .subnavigation {
       display: none;
     }
+
+
+    &.show-desktop {
+      width: 0%;
+
+      @include phone {
+        visibility: hidden;
+      }
+
+    }
+
 
   &-item {
     a {
@@ -195,6 +219,7 @@ img {
           width: 0.45em;
           bottom: 0;
           margin: auto;
+          transition: width 2s, height 2s, transform .5s;
         }
       }
 
